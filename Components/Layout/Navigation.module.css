@@ -1,0 +1,26 @@
+.Navigation {
+    margin: -10px;
+    display: flex;
+}
+.Navigation > a {
+    font-family: montserrat-regular !important;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text-light-color);
+    margin: 10px;
+}
+.Navigation  a.active {
+    color: var(--text-color);
+    font-family: montserrat-medium !important;
+}
+.register {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-light-color);
+    padding: 0 10px;
+}
+.register a {
+    font-family: montserrat-regular;
+    text-decoration: none;
+    color: var(--text-color);
+}

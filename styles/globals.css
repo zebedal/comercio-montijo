@@ -1,16 +1,101 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: montserrat-light;
+  src: url("/assets/fonts/Montserrat-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-regular;
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-medium;
+  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-semi-bold;
+  src: url("/assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-bold;
+  src: url("/assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-black;
+  src: url("/assets/fonts/Montserrat-Black.woff2") format("woff2");
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --text-color: #111111;
+  --text-light-color: #393939;
+  --text-light-grey: #7c7c7c;
+  --green: #5A7D00;
+  --yellow: #F6C000;
+  --global-padding: 50px;
 }
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: montserrat-regular;
+  font-size: 13px;
+  color: var(--text-light-color);
+}
+h1,h2,h3,h4 {
+  line-height: 1.5em;
+}
+.container-fluid {
+  width: 100%;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin: -20px;
+}
+.row > * {
+  margin: 20px;
+}
+.padding50 {
+  padding: 50px 0;
+}
+.padding100 {
+  padding: 100px 0;
+}
+.wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+input[type=file]::-webkit-file-upload-button {
+  border: 2px solid var(--green);
+  padding: 8px 15px;
+  border-radius: .2em;
+  background-color: var(--green);
+  transition: 1s;
+  color: white;
+  font-family: montserrat-regular;
+}
+
+input[type=file]::file-selector-button {
+  /* border: 2px solid var(--green); */
+  border: none;
+  padding: 8px 15px;
+  border-radius: .2em;
+  background-color: #dbdbdb;
+  transition: 1s;
+  color: var(--text-color);
+  font-family: montserrat-regular;
 }

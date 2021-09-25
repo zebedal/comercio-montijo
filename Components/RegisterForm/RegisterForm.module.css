@@ -1,0 +1,82 @@
+.wrapper {
+    padding: 50px;
+}
+.flexWrapper {
+    display: flex;
+    margin: -10px;
+    margin-top: 30px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.flexWrapper > * {
+    margin: 10px;
+}
+.imagePreview {
+    height: 200px;
+    width: 200px;
+    background: rgb(199, 199, 199);
+    margin: 0 auto;
+}
+.formControl {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.formControl label {
+    margin-right: 10px;
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+}
+.formControl input, .formControl textarea {
+    border: 1px solid rgba(57,57,57, .3);
+    padding: 7px 15px;
+    flex: 1;
+    color: var(--text-light-grey);
+}
+.formControl input:focus, .formControl textarea:focus {
+    outline-color: #c2b37e;
+}
+.formControl input::placeholder, .formControl textarea::placeholder {
+   color: var(--text-light-color);
+   font-size: 11px;
+   font-family: montserrat-regular;
+}
+
+.formControl textarea {
+    resize: none;
+}
+.formControl input[type=file] {
+    color: var(--text-light-color);
+    font-family: montserrat-regular;
+    font-size: 11px;
+}
+.error {
+    color: red;
+    font-size: 11px;
+    margin-top: 2px;
+    margin-left: 90px;
+}
+@media(max-width:450px) {
+    .wrapper {
+        padding: 20px;
+    }
+    .formControl {
+        display: block !important;
+    }
+    .formControl input, .formControl textarea{
+        width: 100%;
+        margin-top: 5px;
+    }
+    .formControl label {
+        margin-right: 0;
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+    
+}
