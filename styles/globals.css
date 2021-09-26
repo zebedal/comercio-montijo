@@ -62,7 +62,7 @@ h1 {
   font-size: calc(36px + (42 - 36) * (100vw - 450px) / (1600 - 450)) !important;
 }
 h2 {
-  font-family: quicksand !important;
+  font-family: quicksand ;
   font-weight: 700 !important;
   font-size: calc(32px + (40 - 32) * (100vw - 450px) / (1600 - 450)) !important;
 }

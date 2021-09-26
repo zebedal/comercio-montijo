@@ -74,7 +74,7 @@ const RegisterForm = props => {
         <div className={styles.wrapper}>
             
             <CloseOutlined style={{fontSize:'20px', color:'var(--text-light-color)', position:'absolute', top:'20px', right:'20px', cursor:'pointer'}}/>
-            <h2 style={{textAlign:'center'}}>Registo de novo comerciante</h2>
+            <h2 >Registo de novo comerciante</h2>
             <br/>
             <br/>
             <Steps current={active} responsive >
@@ -97,6 +97,7 @@ const RegisterForm = props => {
                     {active !== 2 ? <Button text="Avançar" func={dispatch} disabled={isValid ? false : true} /> : null}
                     {active === 2 && <Button text="Completar Registo" disabled={isValid ? false : true} click={submitRegister} />}
                 </div>
+
             </form>
 
         </div>

@@ -25,3 +25,8 @@
     color: white;
     font-size: 13px;
 }
+@media(max-width:750px) {
+    .Navigation {
+        display: none;
+    }
+}

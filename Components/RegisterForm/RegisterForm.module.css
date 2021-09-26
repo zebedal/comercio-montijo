@@ -3,6 +3,10 @@
     width: 650px;
     position: relative;
 }
+.wrapper h2 {
+    font-size: 26px !important;
+    text-align: center;
+}
 .flexWrapper {
     display: flex;
     margin: -10px;
