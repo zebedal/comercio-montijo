@@ -4,4 +4,5 @@
     align-items: center;
     padding: 20px var(--global-padding);
     z-index: 998;
+    position: fixed;
 }

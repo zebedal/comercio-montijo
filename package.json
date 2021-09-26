@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^4.16.13",
+    "axios": "^0.21.4",
     "cloudinary-react": "^1.7.0",
     "framer-motion": "^4.1.17",
     "mongodb": "^4.1.2",

@@ -11,7 +11,7 @@ const Navigation = props => (
         <Link href="/">Contactos</Link>
         <span className={styles.register}>
             <Link href="/">Registar</Link>
-            <PlusIcon />
+            <PlusIcon color="white"/>
         </span>
     </nav>
 )

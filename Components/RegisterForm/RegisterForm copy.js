@@ -59,7 +59,7 @@ const RegisterForm = props => {
 
     //check input validity
     const isValid = checkFormInputValidity(evt.target)
-    console.log(isValid)
+
     
     newState.step1[evt.target.name] = newObj
 

@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import ModalWrapper from '../Components/UI/ModalWrapper'
 import RegisterForm from '../Components/RegisterForm/RegisterForm'
+import Hero from '../Components/homepage/Hero'
+import {useState} from 'react'
 
 export default function Home() {
+
+  const [registerModalOpen, setRegisterModalOpen] = useState(false)
+
   return (
     <div >
       <Head>
@@ -11,13 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Hero />
      
-
-        <ModalWrapper>
-          <RegisterForm />
-        </ModalWrapper>
+        {registerModalOpen && <ModalWrapper><RegisterForm /></ModalWrapper>}
      
-
     </div>
   )
 }

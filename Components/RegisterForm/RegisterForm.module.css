@@ -1,5 +1,7 @@
 .wrapper {
-    padding: 50px;
+    padding: 20px 50px 50px;
+    width: 650px;
+    position: relative;
 }
 .flexWrapper {
     display: flex;
@@ -14,8 +16,13 @@
 .imagePreview {
     height: 200px;
     width: 200px;
-    background: rgb(199, 199, 199);
+    /* background: rgb(199, 199, 199); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
+    position: relative;
+    object-fit: cover;
 }
 .formControl {
     margin-top: 20px;
@@ -27,7 +34,7 @@
 .formControl label {
     margin-right: 10px;
     display: inline-block;
-    width: 80px;
+    width: 50px;
     text-align: right;
     font-size: 12px;
     font-weight: bold;
@@ -39,10 +46,10 @@
     color: var(--text-light-grey);
 }
 .formControl input:focus, .formControl textarea:focus {
-    outline-color: #c2b37e;
+    outline-color: var(--text-light-color);
 }
 .formControl input::placeholder, .formControl textarea::placeholder {
-   color: var(--text-light-color);
+   color: rgb(165, 165, 165);
    font-size: 11px;
    font-family: montserrat-regular;
 }
@@ -50,16 +57,17 @@
 .formControl textarea {
     resize: none;
 }
-.formControl input[type=file] {
-    color: var(--text-light-color);
-    font-family: montserrat-regular;
-    font-size: 11px;
-}
+
 .error {
     color: red;
     font-size: 11px;
     margin-top: 2px;
-    margin-left: 90px;
+    margin-left: 60px;
+}
+@media(max-width:750px) {
+    .wrapper {
+        width: 100%;
+    }
 }
 @media(max-width:450px) {
     .wrapper {
