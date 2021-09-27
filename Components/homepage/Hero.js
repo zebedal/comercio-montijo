@@ -75,8 +75,8 @@ const Hero = ({ setQuery }) => {
                     </Form>
 
                 </div>
+
             </div>
-            
         </div>
         
     )

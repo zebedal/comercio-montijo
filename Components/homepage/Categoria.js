@@ -1,17 +1,18 @@
 import styles from './Categoria.module.css'
-import Image from 'next/image'
+import Link from 'next/link'
 
 
-const Categoria = ({nome, icon, count, selected, click, id}) => {
+const Categoria = ({ nome, children, count, selected, click, id }) => {
 
-    
 
     return (
-        <div className={`${styles.wrapper} ${selected ? styles.selected : ""}`} onClick={() => click(id)}>
-        <Image src={icon} width={20} height={20} alt=""/>
-        <h5>{nome}</h5>
-        <p>({count} listas)</p>
-    </div>
+        <Link href="/">
+            <div className={`${styles.wrapper} ${selected ? styles.selected : ""}`} onClick={() => click(id)}>
+                {children}
+                <h5>{nome}</h5>
+                <p>({count} listas)</p>
+            </div>
+        </Link>
     )
 }
 

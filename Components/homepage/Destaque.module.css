@@ -1,0 +1,63 @@
+.Container {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.grid {
+    height: 600px;
+    display: grid;
+    margin-top: 50px;
+    gap:15px;
+    grid-template-areas: 
+    'area1 area1 area2 area3'
+    'area1 area1 area2 area3'
+    'area1 area1 area4 area5'
+    'area1 area1 area4 area5';
+}
+
+.grid > div {
+    cursor: pointer;
+}
+.grid > div:nth-child(1) {
+    position: relative;
+    grid-area: area1;
+    background: green;
+}
+.grid > div:nth-child(2) {
+    position: relative;
+    grid-area: area2;
+    background: yellow;
+}
+.grid > div:nth-child(3) {
+    position: relative;
+    grid-area: area3;
+    background: hotpink;
+}
+.grid > div:nth-child(4) {
+    position: relative;
+    grid-area: area4;
+    background: lavender;
+}
+.grid > div:nth-child(5) {
+    position: relative;
+    grid-area: area5;
+    background: lightblue;
+}
+
+@media(max-width:1220px){
+    .Container {
+        width: 96%;
+    }
+}
+
+@media(max-width:920px){
+    .grid {
+        grid-template-areas: 
+        'area1 area1 area2 area2'
+        'area1 area1 area2 area2'
+        'area1 area1 area3 area3'
+        'area1 area1 area3 area3'
+        'area4 area4 area5 area5'
+        'area4 area4 area5 area5';
+    }
+}

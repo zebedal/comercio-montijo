@@ -33,6 +33,11 @@
   src: url("/assets/fonts/quicksand.woff2") format("woff2");
   font-display: swap;
 }
+@font-face {
+  font-family: quicksand-semi-bold;
+  src: url("/assets/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
 
 :root {
   --text-color: #111111;
@@ -62,8 +67,8 @@ h1 {
   font-size: calc(36px + (42 - 36) * (100vw - 450px) / (1600 - 450)) !important;
 }
 h2 {
-  font-family: quicksand ;
-  font-weight: 700 !important;
+  font-family: quicksand-semi-bold ;
+  /* font-weight: 700 !important; */
   font-size: calc(32px + (40 - 32) * (100vw - 450px) / (1600 - 450)) !important;
 }
 a {
@@ -73,7 +78,7 @@ a:hover {
   color: var(--green) !important;
 }
 label {
-  font-family: montserrat-regular;
+  font-family: montserrat-semi-bold;
   font-size: 12px !important;
   color: var(--text-light-color);
 }
@@ -87,6 +92,7 @@ input {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  width: 80%;
 }
 .row {
   display: flex;
