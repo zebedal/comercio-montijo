@@ -3,7 +3,7 @@ const IMAGE_PATH = "/assets/img/icons/"
 export const categorias = [
     {
         id:1,
-        nome: 'Restauração',
+        nome: 'Comer',
         icon: `${IMAGE_PATH}restaurante.svg`,
         count: 15
     },
@@ -30,6 +30,19 @@ export const categorias = [
         nome: 'Lojas',
         icon: `${IMAGE_PATH}lojas.svg`,
         count: 47
+    },
+    {
+        id:6,
+        nome: 'Ginásios',
+        icon: `${IMAGE_PATH}lojas.svg`,
+        count: 47
+    },
+    {
+        id:7,
+        nome: 'Outro',
+        icon: `${IMAGE_PATH}lojas.svg`,
+        count: 47
     }
+    
     
 ]

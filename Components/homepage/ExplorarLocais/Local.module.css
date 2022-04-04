@@ -1,0 +1,50 @@
+.wrapper {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 4px 4px 14px rgba(0,0,0, .2);
+    overflow: hidden;
+}
+.imgWrapper{
+    height: 180px;
+    position: relative;
+}
+.imgWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .4);
+    z-index: 1;
+}
+.subCategorias {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+    font-size: 10px;
+}
+.title {
+    padding: 10px;
+}
+.wrapper address {
+    font-size: 10px;
+    color: var(--text-light-color);
+    margin: 0 !important;
+}
+.desc {
+    padding: 10px;
+    font-size: 10px;
+    color: var(--text-light-grey);
+    line-height: 2em;
+}
+.footer {
+    padding: 10px;
+    font-size: 11px;
+
+}

@@ -1,0 +1,64 @@
+@import "/styles/variables";
+
+@font-face {
+  font-family: montserrat-light;
+  src: url("/assets/fonts/Montserrat-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-regular;
+  src: url("/assets/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: montserrat-medium;
+  src: url("/assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: quicksand-light;
+  src: url("/assets/fonts/quicksand.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: quicksand-regular;
+  src: url("/assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: quicksand-semi-bold;
+  src: url("/assets/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat-regular;
+  font-size: $text-regular;
+  color: $text-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: quicksand-semi-bold;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+h1 {
+  font-size: calc(36px + (42 - 36) * (100vw - 450px) / (1600 - 450)) !important;
+}
+h2 {
+  font-size: calc(32px + (40 - 32) * (100vw - 450px) / (1600 - 450)) !important;
+}
+input {
+  font-family: montserrat-regular;
+}
+a:hover {
+  color: $green;
+}

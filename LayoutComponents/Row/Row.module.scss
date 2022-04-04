@@ -1,0 +1,96 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.FlexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.center {
+  justify-content: center;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.align-flex-start {
+  align-items: flex-start;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+.align-flex-center {
+  align-items: center;
+}
+.tiny-padding {
+  padding-top: $tiny-padding;
+  padding-bottom: $tiny-padding;
+}
+.small-padding {
+  padding-top: $small-padding;
+  padding-bottom: $small-padding;
+}
+.medium-padding {
+  padding-top: $medium-padding;
+  padding-bottom: $medium-padding;
+}
+.large-padding {
+  padding-top: $large-padding;
+  padding-bottom: $large-padding;
+}
+.extra-large-padding {
+  padding-top: $extra-large-padding;
+  padding-bottom: $extra-large-padding;
+}
+.small-width {
+  max-width: $small-devices;
+}
+.medium-width {
+  max-width: $medium-devices;
+}
+.large-width {
+  max-width: $large-devices;
+}
+.extra-large-width {
+  max-width: $extra-large-devices;
+}
+.no-max-width {
+  max-width: 100%;
+}
+.maxHeight {
+  height: 100%;
+}
+.tiny-gutter {
+  padding-left: $tiny-gutter;
+  padding-right: $tiny-gutter;
+}
+.small-gutter {
+  padding-left: $small-gutter;
+  padding-right: $small-gutter;
+}
+.medium-gutter {
+  padding-left: $medium-gutter;
+  padding-right: $medium-gutter;
+}
+.large-gutter {
+  padding-left: $large-gutter;
+  padding-right: $large-gutter;
+}
+.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+.noMargin {
+  margin: 0;
+}

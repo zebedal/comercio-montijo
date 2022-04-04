@@ -1,0 +1,14 @@
+.subTitle {
+  font-family: quicksand-semi-bold;
+  display: inline-block;
+  margin: 10px 0;
+}
+.small {
+  font-size: calc(20px + (30 - 20) * (100vw - 500px) / (1920 - 500));
+}
+.regular {
+  font-size: calc(32px + (46 - 32) * (100vw - 500px) / (1920 - 500));
+}
+.large {
+  font-size: calc(50px + (72 - 50) * (100vw - 500px) / (1920 - 500));
+}

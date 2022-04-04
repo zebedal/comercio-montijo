@@ -1,0 +1,35 @@
+@import "/styles/variables";
+
+.Section {
+  position: relative;
+}
+.tiny-padding {
+  padding-top: $tiny-padding;
+  padding-bottom: $tiny-padding;
+}
+.small-padding {
+  padding-top: $small-padding;
+  padding-bottom: $small-padding;
+}
+.medium-padding {
+  padding-top: $medium-padding;
+  padding-bottom: $medium-padding;
+}
+.large-padding {
+  padding-top: $large-padding;
+  padding-bottom: $large-padding;
+}
+.extra-large-padding {
+  padding-top: $extra-large-padding;
+  padding-bottom: $extra-large-padding;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, $dark-blue, $black);
+  /*  background: rgba(0, 0, 0, 0.9); */
+  mix-blend-mode: multiply;
+}

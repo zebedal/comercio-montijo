@@ -1,0 +1,64 @@
+@import "/styles/variables";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  label {
+    margin-right: 10px;
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    width: 70px;
+  }
+  .selectorWrapper {
+    position: relative;
+    width: calc(100% - 70px);
+    .selector {
+      position: relative;
+      border: 1px solid rgba(57, 57, 57, 0.3);
+      padding: 5px 15px;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      cursor: pointer;
+      .text {
+        color: $text-light-grey;
+        font-size: $text-small;
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      border: 1px solid rgba(57, 57, 57, 0.3);
+      width: 100%;
+      list-style: none;
+      background: white;
+      max-height: 200px;
+      overflow-y: auto;
+      .listItem {
+        padding: 8px 15px;
+        transition: all 0.3s;
+        color: $text-light-grey;
+        font-size: $text-small;
+        cursor: pointer;
+        &:hover {
+          color: $green;
+          background: #dddddd;
+        }
+      }
+    }
+  }
+}
+.error {
+  color: red;
+  font-size: 11px;
+  margin-top: 2px;
+  margin-left: 70px;
+}

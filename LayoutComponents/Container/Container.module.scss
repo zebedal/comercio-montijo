@@ -1,0 +1,67 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.Container {
+  margin: 0 auto;
+  position: relative;
+}
+.tiny-padding {
+  padding-top: $tiny-padding;
+  padding-bottom: $tiny-padding;
+}
+.small-padding {
+  padding-top: $small-padding;
+  padding-bottom: $small-padding;
+}
+.medium-padding {
+  padding-top: $medium-padding;
+  padding-bottom: $medium-padding;
+}
+.large-padding {
+  padding-top: $large-padding;
+  padding-bottom: $large-padding;
+}
+.extra-large-padding {
+  padding-top: $extra-large-padding;
+  padding-bottom: $extra-large-padding;
+}
+.small-width {
+  max-width: $small-devices;
+}
+.medium-width {
+  max-width: $medium-devices;
+}
+.large-width {
+  max-width: $large-devices;
+}
+.extra-large-width {
+  max-width: $extra-large-devices;
+}
+.no-max-width {
+  max-width: 100%;
+}
+.noMargin {
+  margin: 0;
+}
+.maxHeight {
+  height: 100%;
+}
+.tiny-gutter {
+  padding-left: $tiny-gutter;
+  padding-right: $tiny-gutter;
+}
+.small-gutter {
+  padding-left: $small-gutter;
+  padding-right: $small-gutter;
+}
+.medium-gutter {
+  padding-left: $medium-gutter;
+  padding-right: $medium-gutter;
+}
+.large-gutter {
+  padding-left: $large-gutter;
+  padding-right: $large-gutter;
+}
+.no-gutter {
+  padding: unset 0;
+}

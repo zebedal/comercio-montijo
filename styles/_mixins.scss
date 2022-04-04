@@ -1,0 +1,71 @@
+@import "/styles/variables";
+
+$regular: 14;
+$large: 16;
+$small: 12;
+
+@mixin nav-links($color: white, $size: $text-regular) {
+  color: $color;
+  text-decoration: none;
+  font-family: montserrat-regular;
+  font-size: $size;
+  transition: all 0.4s ease;
+  &:hover {
+    color: $green;
+  }
+}
+
+@mixin footer-links {
+  color: white;
+  text-decoration: none;
+  font-family: montserrat-light;
+  font-size: $text-small;
+  display: block;
+  margin: 10px 0;
+  &:hover {
+    color: $green;
+  }
+}
+
+@mixin small-devices {
+  @media (max-width: $small-devices) {
+    @content;
+  }
+}
+@mixin medium-devices {
+  @media (max-width: $medium-devices) {
+    @content;
+  }
+}
+@mixin large-devices {
+  @media (max-width: $large-devices) {
+    @content;
+  }
+}
+@mixin extra-large-devices {
+  @media (max-width: $extra-large-devices) {
+    @content;
+  }
+}
+@mixin custom-device($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+@mixin tiny-text {
+  font-size: $text-tiny;
+}
+@mixin small-text {
+  font-size: $text-small;
+}
+@mixin regular-text {
+  font-size: $text-regular;
+}
+@mixin large-text {
+  font-size: $text-large;
+}
+@mixin extra-large-text {
+  font-size: 24px;
+}
+
+//font weights

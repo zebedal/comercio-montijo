@@ -1,0 +1,26 @@
+@import "/styles/mixins";
+@import "/styles/variables";
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+  transition: transform 0.5s ease;
+  & a {
+    @include nav-links;
+  }
+}
+.scrolled {
+  background: linear-gradient(to right, #181818, $text-color 80%);
+  transform: translateY(-15px);
+}
+.NavBar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  backface-visibility: hidden;
+}
+.registerButton {
+  border-radius: 5px;
+}

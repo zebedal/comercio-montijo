@@ -1,0 +1,48 @@
+@import "/styles/variables";
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  /* background: linear-gradient(to right, $green, $text-color); */
+  background: $green;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: white;
+  font-family: montserrat-regular;
+  gap: 10px;
+  font-size: $text-regular;
+  transition: opacity 0.5s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.rounded {
+  border-radius: 25px;
+}
+.disabled {
+  pointer-events: none;
+  background: $text-light-grey;
+}
+.small-margin-top {
+  margin-top: 20px;
+}
+.medium-margin-top {
+  margin-top: 30px;
+}
+.large-margin-top {
+  margin-top: 50px;
+}
+.no-margin {
+  margin: 0;
+}
+.icon-left {
+  flex-direction: row-reverse;
+}
+.noBg {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: $text-color;
+}

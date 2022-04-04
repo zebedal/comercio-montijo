@@ -1,0 +1,26 @@
+@import "/styles/mixins";
+@import "/styles/variables";
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: rgb(255, 255, 255, 0.96);
+  z-index: 999;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  .linksWrapper {
+    & a {
+      display: block;
+      @include nav-links($text-color, 16px);
+    }
+    & > * {
+      margin-top: 10px;
+    }
+  }
+  .iconsWrapper {
+    .icons {
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+}
