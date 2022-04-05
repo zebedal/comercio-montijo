@@ -17,7 +17,7 @@ const RegisterForm = () => {
     watch,
     formState: { errors, isValid },
   } = useForm({ mode: "onChange" });
-  const [activeStep, setActiveStep] = useState<number>(1);
+  const [activeStep, setActiveStep] = useState<number>(2);
 
   const submitRegister = () => {
     console.log(watch());
@@ -25,8 +25,6 @@ const RegisterForm = () => {
 
   const stepForward = () => {
     setActiveStep((prevState) => prevState + 1);
-    console.log(errors);
-    console.log(isValid);
   };
 
   const stepBackward = () => {
@@ -36,6 +34,7 @@ const RegisterForm = () => {
   return (
     <div className={styles.wrapper}>
       <Multistep activeIndex={activeStep} />
+      <br />
       <form>
         {activeStep === 1 && (
           <Step1 register={register} errors={errors} control={control} />

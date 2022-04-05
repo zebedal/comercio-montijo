@@ -1,7 +1,8 @@
 import { CategoriasNegocios as options } from "utils/consts";
 import styles from "./RegisterForm.module.scss";
 import Select, { StylesConfig } from "react-select";
-import { useForm, Controller } from "react-hook-form";
+import { Controller } from "react-hook-form";
+import Text, { TextAlign, TextSizes } from "UI-Components/Text/Text";
 
 interface StepProps {
   errors?: any;
@@ -16,14 +17,19 @@ const Step1 = ({ errors, register, control }: StepProps) => {
 
       border: "1px solid rgba(57, 57, 57, 0.3)",
       boxShadow: state.isFocused ? "none" : "none",
+      cursor: "pointer",
       "&:hover": {
         boxShadow: "none",
       },
     }),
     option: (base, state) => ({
       ...base,
-      backgroundColor: state.isFocused ? "rgba(189,197,209,.3)" : "white",
+      backgroundColor: state.isSelected ? "rgba(189,197,209,.5)" : "white",
       fontSize: "$text-small",
+      color: state.isSelected ? "#5a7d00" : "$text-color",
+      "&:hover": {
+        backgroundColor: "rgba(189,197,209,.5)",
+      },
     }),
   };
 
@@ -135,6 +141,13 @@ const Step1 = ({ errors, register, control }: StepProps) => {
       {errors.categoria && (
         <p className={styles.error}>{errors.categoria.message}</p>
       )}
+      <Text
+        text="Não encontra a categoria que procura?"
+        size={TextSizes.Small}
+        textAlign={TextAlign.center}
+      >
+        <a href="">&nbsp;contacte-nos</a>
+      </Text>
     </div>
   );
 };

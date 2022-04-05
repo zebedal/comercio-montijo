@@ -1,7 +1,16 @@
-import Image from "next/image";
-import styles from "./RegisterForm.module.scss";
+import Row, { Justify } from "LayoutComponents/Row/Row";
+import React, { useState } from "react";
+import UploadImage from "./UploadImage";
+export interface SelectedImage {
+  name: string;
+  size: number;
+  type: string;
+  url: string;
+}
 
 const Step2 = () => {
+  const [selectedImages, setSelectedImages] = useState<SelectedImage[]>([]);
+
   const onSelect = (data: any) => {
     console.log("Select files", data);
   };
@@ -13,50 +22,61 @@ const Step2 = () => {
     console.log("Upload files", data);
   };
 
-  const dataSources = [
-    {
-      id: 1,
-      dataURL: "https://picsum.photos/seed/1/600",
-    },
-    {
-      id: 2,
-      dataURL: "https://picsum.photos/seed/2/600",
-    },
-    {
-      id: 3,
-      dataURL: "https://picsum.photos/seed/3/600",
-    },
-    {
-      id: 4,
-      dataURL: "https://picsum.photos/seed/4/600",
-    },
-    {
-      id: 5,
-      dataURL: "https://picsum.photos/seed/5/600",
-    },
-    {
-      id: 6,
-      dataURL: "https://picsum.photos/seed/6/600",
-    },
-    {
-      id: 7,
-      dataURL: "https://picsum.photos/seed/7/600",
-    },
-    {
-      id: 8,
-      dataURL: "https://picsum.photos/seed/8/600",
-    },
-    {
-      id: 9,
-      dataURL: "https://picsum.photos/seed/9/600",
-    },
-    {
-      id: 10,
-      dataURL: "https://picsum.photos/seed/10/600",
-    },
-  ];
+  const onImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const selectedImage: SelectedImage = {
+        name: event.target.files[0].name,
+        size: event.target.files[0].size,
+        url: URL.createObjectURL(event.target.files[0]),
+        type: event.target.files[0].type,
+      };
+      setSelectedImages([...selectedImages, selectedImage]);
+    }
+  };
 
-  return <div className={styles.step}></div>;
+  const onImageDelete = (imgName: string) => {
+    const filteredImages = selectedImages.filter((img) => {
+      return img.name !== imgName;
+    });
+    setSelectedImages(filteredImages);
+  };
+
+  return (
+    <>
+      <Row wrap justify={Justify.Center} gap={20}>
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[0]}
+        />
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[1]}
+        />
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[2]}
+        />
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[3]}
+        />
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[4]}
+        />
+        <UploadImage
+          onChange={onImageChange}
+          onDelete={onImageDelete}
+          selectedImage={selectedImages[5]}
+        />
+      </Row>
+    </>
+  );
 };
 
 export default Step2;

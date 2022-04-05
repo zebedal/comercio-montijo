@@ -16,7 +16,7 @@ export interface Steps {
 const variants = {
   initial: { scale: 1 },
   animated: {
-    scale: 1.2,
+    scale: 1.3,
     transition: {
       type: "spring",
       velocity: 10,
@@ -40,12 +40,12 @@ export default function Step({ title, active, stepNumber, completed }: Steps) {
           [styles.active]: active,
         })}
       >
-        {stepNumber}
+        {!completed && stepNumber}
         {completed && (
           <BsCheck className={styles.checkMark} color={Colors.Green} />
         )}
       </div>
-      <Text text={title} size={TextSizes.Tiny} />
+      <Text text={title} size={TextSizes.Small} />
     </motion.div>
   );
 }
