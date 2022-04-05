@@ -11,6 +11,8 @@
   border-radius: 5px;
   z-index: 999;
   background: white;
+  max-height: 90vh;
+  /* overflow-y: auto; */
   & > svg {
     cursor: pointer;
     position: absolute;

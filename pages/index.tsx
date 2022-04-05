@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Destaque />
-      {/*  <ExplorarLocais /> */}
+      <ExplorarLocais />
 
       <pre>{JSON.stringify(searchQuery, null, 2)}</pre>
     </Fragment>

@@ -15,7 +15,7 @@ const steps = [
     completed: false,
   },
   {
-    title: "Dados negócio",
+    title: "Descrição",
     active: false,
     completed: false,
   },
@@ -28,14 +28,14 @@ interface MultistepProps {
 export default function Multistep({ activeIndex }: MultistepProps) {
   return (
     <Container>
-      <Row gap={30} justify={Justify.Center}>
+      <Row justify={Justify.SpaceAround}>
         {steps.map((step, index) => {
           return (
             <Step
               key={index}
               active={index + 1 === activeIndex}
               title={step.title}
-              completed={step.completed}
+              completed={index + 1 < activeIndex}
               stepNumber={index + 1}
             />
           );

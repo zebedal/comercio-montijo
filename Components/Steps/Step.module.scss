@@ -8,8 +8,8 @@
   .circle {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,12 @@
     color: white;
     .checkMark {
       fill: white;
+    }
+  }
+  .completed {
+    background: $light-green;
+    .checkMark {
+      fill: $text-color;
     }
   }
 }
