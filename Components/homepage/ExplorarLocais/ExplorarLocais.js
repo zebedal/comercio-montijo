@@ -1,8 +1,9 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import ExplorarHeader from "./ExplorarHeader";
 import ExplorarContent from "./ExplorarContent";
 import { categorias } from "../../../public/data/explorar";
 import Container, {
+  ContainerGutterSizes,
   ContainerSizes,
 } from "LayoutComponents/Container/Container";
 
@@ -14,7 +15,7 @@ const ExplorarLocais = (props) => {
       <Container maxWidth={ContainerSizes.NoMaxWitdh}>
         <ExplorarHeader />
       </Container>
-      <Container>
+      <Container gutter={ContainerGutterSizes.Small}>
         <ExplorarContent data={categorias} />
       </Container>
     </>

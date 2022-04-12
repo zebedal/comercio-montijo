@@ -1,3 +1,5 @@
+import { StylesConfig } from "react-select";
+
 export enum Breakpoints {
   Small = 600,
   Medium = 960,
@@ -79,3 +81,46 @@ export const CategoriasNegocios = [
     value: "Moda",
   },
 ];
+
+export const selectStyles: StylesConfig = {
+  control: (provided: Record<string, unknown>, state: any) => ({
+    ...provided,
+
+    border: "1px solid rgba(57, 57, 57, 0.3)",
+    boxShadow: state.isFocused ? "none" : "none",
+    cursor: "pointer",
+    "&:hover": {
+      boxShadow: "none",
+    },
+  }),
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isSelected ? "rgba(189,197,209,.5)" : "white",
+    fontSize: "$text-small",
+    color: state.isSelected ? "#5a7d00" : "$text-color",
+    "&:hover": {
+      backgroundColor: "rgba(189,197,209,.5)",
+    },
+  }),
+};
+
+export const selectNoBorderStyles: StylesConfig = {
+  control: (provided: Record<string, unknown>, state: any) => ({
+    ...provided,
+    border: "none",
+    boxShadow: state.isFocused ? "none" : "none",
+    cursor: "pointer",
+    "&:hover": {
+      boxShadow: "none",
+    },
+  }),
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isSelected ? "rgba(189,197,209,.5)" : "white",
+    fontSize: "$text-small",
+    color: state.isSelected ? "#5a7d00" : "$text-color",
+    "&:hover": {
+      backgroundColor: "rgba(189,197,209,.5)",
+    },
+  }),
+};

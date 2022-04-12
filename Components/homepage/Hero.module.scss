@@ -1,3 +1,5 @@
+@import "/styles/variables";
+
 .overlay {
   position: absolute;
   top: 0;
@@ -23,26 +25,22 @@
   border-radius: 5px;
   background: white;
   position: relative;
-  height: 45px;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
-.searchWrapper > form > .formBox {
+.searchWrapper > form {
   padding: 0 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   margin-bottom: 0 !important;
 }
-.dividerVertical {
-  height: 100%;
-  display: inline-block;
-  width: 1px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+.Input {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: $text-light-color;
 }
-.searchWrapper span {
-  font-family: montserrat-regular;
-
-  color: var(--text-light-grey);
-  font-size: 12px;
+.roundedButton {
+  border-radius: 5px;
 }

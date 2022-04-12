@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Star from "../svg/Star";
 import Container, {
+  ContainerGutterSizes,
   ContainerPaddingSizes,
   ContainerSizes,
   TextAlign,
 } from "LayoutComponents/Container/Container";
+import Subtitle from "UI-Components/Subtitle/Subtitle";
 
 const starStyles = {
   position: "absolute",
@@ -21,8 +23,9 @@ const Destaque = () => {
       maxWidth={ContainerSizes.Large}
       textAlign={TextAlign.Center}
       padding={ContainerPaddingSizes.Medium}
+      gutter={ContainerGutterSizes.Small}
     >
-      <h2>Lojas em destaque</h2>
+      <Subtitle coloredText="Comerciantes" text="em destaque" />
       <p>Pesquise uma seleção dos melhores comerciantes no Montijo</p>
       <div className={styles.grid}>
         <Link href="/" passHref>

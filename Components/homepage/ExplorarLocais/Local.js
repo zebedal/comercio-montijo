@@ -1,5 +1,6 @@
 import styles from "./Local.module.css";
 import Image from "next/image";
+import { MdOutlinePhotoCamera } from "react-icons/md";
 
 const Local = (props) => {
   return (
@@ -14,7 +15,6 @@ const Local = (props) => {
         <div className={styles.subCategorias}>
           {props.subCategorias.join(" , ")}
         </div>
-        {/* <LocalStatus status={props.openStatus} absolute nome={props.nome} /> */}
       </div>
       <div className={styles.title}>
         <h3>{props.nome}</h3>
@@ -23,7 +23,10 @@ const Local = (props) => {
 
       <div className={styles.desc}>{props.desc}</div>
 
-      <div className={styles.footer}>{props.numFotos}</div>
+      <div className={styles.footer}>
+        {props.numFotos}
+        <MdOutlinePhotoCamera color="#111111" size={13} />
+      </div>
     </div>
   );
 };

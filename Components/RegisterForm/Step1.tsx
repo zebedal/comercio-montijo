@@ -3,6 +3,7 @@ import styles from "./RegisterForm.module.scss";
 import Select, { StylesConfig } from "react-select";
 import { Controller } from "react-hook-form";
 import Text, { TextAlign, TextSizes } from "UI-Components/Text/Text";
+import { selectStyles } from "utils/consts";
 
 interface StepProps {
   errors?: any;
@@ -11,28 +12,6 @@ interface StepProps {
 }
 
 const Step1 = ({ errors, register, control }: StepProps) => {
-  const customStyles: StylesConfig = {
-    control: (provided: Record<string, unknown>, state: any) => ({
-      ...provided,
-
-      border: "1px solid rgba(57, 57, 57, 0.3)",
-      boxShadow: state.isFocused ? "none" : "none",
-      cursor: "pointer",
-      "&:hover": {
-        boxShadow: "none",
-      },
-    }),
-    option: (base, state) => ({
-      ...base,
-      backgroundColor: state.isSelected ? "rgba(189,197,209,.5)" : "white",
-      fontSize: "$text-small",
-      color: state.isSelected ? "#5a7d00" : "$text-color",
-      "&:hover": {
-        backgroundColor: "rgba(189,197,209,.5)",
-      },
-    }),
-  };
-
   return (
     <div className={styles.step}>
       <div className={styles.formControl}>
@@ -122,11 +101,10 @@ const Step1 = ({ errors, register, control }: StepProps) => {
             },
           }}
           render={({ field: { onChange, value, name } }) => {
-            console.log(onChange);
             return (
               <Select
                 options={options}
-                styles={customStyles}
+                styles={selectStyles}
                 className={styles.selectContainer}
                 isClearable
                 maxMenuHeight={200}
