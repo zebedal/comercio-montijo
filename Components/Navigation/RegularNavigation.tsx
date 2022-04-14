@@ -93,6 +93,7 @@ export default function RegularNavigation({
               icon={<BsClipboardPlus size={20} />}
               click={openRegisterModal}
               className={styles.registerButton}
+              noBackground
             />
           </nav>
         </Row>

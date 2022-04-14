@@ -1,0 +1,47 @@
+.Header {
+  height: 300px;
+  position: relative;
+  margin-top: 80px;
+}
+.Header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.title h2,
+.title p {
+  color: white !important;
+}
+.categoryWrapper {
+  width: auto;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.anchor {
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+.categoryWrapper .swiper-slide {
+  text-align: center !important;
+}
+.fluid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}

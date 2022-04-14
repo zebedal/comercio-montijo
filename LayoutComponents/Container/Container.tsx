@@ -11,6 +11,7 @@ export enum ContainerSizes {
 }
 
 export enum ContainerPaddingSizes {
+  ExtraTiny = "extra-tiny-padding",
   Tiny = "tiny-padding",
   Small = "small-padding",
   Medium = "medium-padding",

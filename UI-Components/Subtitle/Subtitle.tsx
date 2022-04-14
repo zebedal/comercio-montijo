@@ -31,7 +31,7 @@ export default function Subtitle({
         style={{ color, maxWidth }}
         className={cx(styles.subTitle, styles[size], className)}
       >
-        <span style={{ color: Colors.Green }}>{coloredText}&nbsp;</span>
+        <span style={{ color: Colors.Blue }}>{coloredText}&nbsp;</span>
         {text}
       </h2>
     </div>

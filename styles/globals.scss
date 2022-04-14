@@ -30,6 +30,11 @@
   src: url("/assets/fonts/Quicksand-SemiBold.ttf") format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: quicksand-bold;
+  src: url("/assets/fonts/Quicksand-Bold.woff2") format("woff2");
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -41,7 +46,9 @@ body {
   font-size: $text-regular;
   color: $text-color;
 }
-h1,
+h1 {
+  font-family: quicksand-bold;
+}
 h2,
 h3,
 h4,
@@ -51,7 +58,7 @@ h5 {
   margin-bottom: 0;
 }
 h1 {
-  font-size: calc(36px + (42 - 36) * (100vw - 450px) / (1600 - 450)) !important;
+  font-size: calc(36px + (46 - 36) * (100vw - 450px) / (1440 - 450)) !important;
 }
 h2 {
   font-size: calc(32px + (40 - 32) * (100vw - 450px) / (1600 - 450)) !important;

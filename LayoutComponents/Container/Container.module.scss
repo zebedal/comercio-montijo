@@ -5,6 +5,10 @@
   margin: 0 auto;
   position: relative;
 }
+.extra-tiny-padding {
+  padding-top: $extra-tiny-padding;
+  padding-bottom: $extra-tiny-padding;
+}
 .tiny-padding {
   padding-top: $tiny-padding;
   padding-bottom: $tiny-padding;

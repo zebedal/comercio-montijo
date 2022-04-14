@@ -9,7 +9,7 @@
   background: $green;
   cursor: pointer;
   outline: none;
-  border: none;
+  border: 1px solid $green;
   color: white;
   font-family: montserrat-regular;
   gap: 10px;
@@ -43,6 +43,6 @@
 }
 .noBg {
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  color: $text-color;
+  border: 1px solid white;
+  color: white;
 }

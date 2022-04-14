@@ -1,11 +1,16 @@
 import Image from "next/image";
-import styles from "./ExplorarHeader.module.css";
+import styles from "./ExplorarHeader.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import Subtitle from "UI-Components/Subtitle/Subtitle";
 import { Colors } from "utils/consts";
+import Container, {
+  ContainerPaddingSizes,
+  ContainerSizes,
+} from "LayoutComponents/Container/Container";
+import Section from "LayoutComponents/Section/Section";
 
 const categorias = [
   {
@@ -46,7 +51,7 @@ const categorias = [
 ];
 
 const ExplorarHeader = (props) => (
-  <header className={styles.Header}>
+  <Section className={styles.Header}>
     <Image
       src="/assets/img/montijo.jpg"
       layout="fill"
@@ -57,10 +62,14 @@ const ExplorarHeader = (props) => (
       <Subtitle color={Colors.Green} text="locais" coloredText="Explorar" />
       <p>Todos os locais disponíveis no nosso directório</p>
     </div>
-    <div className={`container-fluid ${styles.fluid}`}>
-      <div className={`container ${styles.categoryWrapper}`}>
+    <Container
+      className={styles.fluid}
+      maxWidth={ContainerSizes.NoMaxWitdh}
+      padding={ContainerPaddingSizes.Tiny}
+    >
+      <Container maxWidth={ContainerSizes.Large}>
         <Swiper
-          className="swiperfuck"
+          /* className="swiperfuck" */
           modules={[Navigation, Pagination]}
           navigation={{
             nextEl: ".swiperNext",
@@ -83,7 +92,7 @@ const ExplorarHeader = (props) => (
           {categorias.map((cat) => {
             return (
               <SwiperSlide key={cat.id} style={{ textAlign: "center" }}>
-                <a>{cat.nome}</a>
+                <a className={styles.anchor}>{cat.nome}</a>
               </SwiperSlide>
             );
           })}
@@ -95,9 +104,9 @@ const ExplorarHeader = (props) => (
             Prox
           </div>
         </Swiper>
-      </div>
-    </div>
-  </header>
+      </Container>
+    </Container>
+  </Section>
 );
 
 export default ExplorarHeader;

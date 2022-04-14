@@ -3,9 +3,10 @@ import ExplorarHeader from "./ExplorarHeader";
 import ExplorarContent from "./ExplorarContent";
 import { categorias } from "../../../public/data/explorar";
 import Container, {
-  ContainerGutterSizes,
   ContainerSizes,
 } from "LayoutComponents/Container/Container";
+import Section from "LayoutComponents/Section/Section";
+import { Colors } from "utils/consts";
 
 const ExplorarLocais = (props) => {
   const [filter, setFilter] = useState("Todas");
@@ -15,9 +16,9 @@ const ExplorarLocais = (props) => {
       <Container maxWidth={ContainerSizes.NoMaxWitdh}>
         <ExplorarHeader />
       </Container>
-      <Container gutter={ContainerGutterSizes.Small}>
+      <Section bgColor={Colors.LightGrey}>
         <ExplorarContent data={categorias} />
-      </Container>
+      </Section>
     </>
   );
 };

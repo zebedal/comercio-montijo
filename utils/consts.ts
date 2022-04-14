@@ -10,10 +10,12 @@ export enum Breakpoints {
 export enum Colors {
   TextColor = "#111111",
   TextLightColor = "#393939",
-  Green = "#5A7D00",
+  LightGrey = "#f1f1f1",
+  Green = "#62c358",
   Yellow = "#F6C000",
   Transparent = "transparent",
   White = "white",
+  Blue = "#2d48c3",
 }
 
 export const MenuItems = [
